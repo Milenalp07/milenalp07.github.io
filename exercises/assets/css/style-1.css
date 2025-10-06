@@ -100,6 +100,7 @@ h1 {
     font-size: var(--fs-xxxl);
     line-height: 1.2;
     font-family: var(--font-serif);
+    color : red;
 
 }
 
@@ -109,6 +110,7 @@ h2 {
     margin-top: 42px;
     margin-bottom: 16px;
     font-family: var(--font-serif);
+    color : white;
 }
 
 h3 {
@@ -117,6 +119,7 @@ h3 {
     margin-bottom: 4px;
     line-height: 1.2;
     font-family: var(--font-serif);
+    color: white;
 }
 
 p {
@@ -124,6 +127,7 @@ p {
     line-height: 1.7;
 	margin-bottom: 12px;
     font-family: var(--font-serif);
+    color : white
 
 
 }
