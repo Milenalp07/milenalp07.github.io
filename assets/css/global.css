@@ -93,28 +93,56 @@ section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
 
 /* ============= TYPOGRAPHY ============ */
 
-h1 {
-    font-size: var(--fs-xxxl);
-    line-height: 1.2;
-}
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-h2 {
-    font-size: var(--fs-xl);
-    line-height: 1.2;
-    margin-top: 42px;
-    margin-bottom: 16px;
-}
+        /* Centraliza todo o conteúdo da página */
+        body {
+            display: flex;
+            justify-content: center; /* horizontal */
+            align-items: center;     /* vertical */
+            flex-direction: column;  /* organiza elementos em coluna */
+            height: 100vh;           /* ocupa toda a altura da tela */
+            font-family: Arial, sans-serif;
+            background-color: #F0BE97; /* cor de fundo suave */
+            text-align: center;      /* centraliza texto */
+            padding: 20px;
+        }
 
-h3 {
-    font-size: var(--fs-lg);
-    margin-top: 48px; 
-    margin-bottom: 4px;
-    line-height: 1.2;
-}
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-p {
-	font-size: var(--fs-base);
-    line-height: 1.7;
-	margin-bottom: 12px;
-}
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        img {
+            width: 200px;  /* tamanho específico */
+            height: 200px;
+            border-radius: 10px; /* opcional: cantos arredondados */
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
 

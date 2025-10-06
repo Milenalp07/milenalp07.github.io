@@ -94,9 +94,13 @@ section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
 
 /* ============= TYPOGRAPHY ============ */
 
+body { background-color: #F0BE97; }
+
 h1 {
     font-size: var(--fs-xxxl);
     line-height: 1.2;
+    font-family: var(--font-serif);
+
 }
 
 h2 {
@@ -104,6 +108,7 @@ h2 {
     line-height: 1.2;
     margin-top: 42px;
     margin-bottom: 16px;
+    font-family: var(--font-serif);
 }
 
 h3 {
@@ -111,12 +116,16 @@ h3 {
     margin-top: 48px; 
     margin-bottom: 4px;
     line-height: 1.2;
+    font-family: var(--font-serif);
 }
 
 p {
 	font-size: var(--fs-base);
     line-height: 1.7;
 	margin-bottom: 12px;
+    font-family: var(--font-serif);
+
+
 }
 
 
