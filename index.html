@@ -1,26 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="assets/css/global.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="assets/css/global.css">
+  <title>Milena Pires - Web Designer</title>
 
-    <title>Milena Pires - Web Designer</title>
-
+  <style>
+    /* Canvas no fundo */
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;   /* fica atrás do conteúdo */
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
-
+  <header>
     <h1>Hi, I'm Milena Pires</h1>
     <h2>Web / UI Designer</h2>
     <p>I created this website to showcase some of my recent web design work.</p>
     <p>
-        <img src="https://i.pinimg.com/originals/f0/ae/8b/f0ae8bc86ab9b5459880ea9e8894774d.gif" alt="GIF animado">
+      <img src="https://i.pinimg.com/originals/f0/ae/8b/f0ae8bc86ab9b5459880ea9e8894774d.gif" alt="GIF animado">
     </p>
+
+    <section class="section-1">
+
     <p><a href="exercises/page-1.html">A Tale of Two Cities</a></p>
     <p><a href="exercises/page-2.html">Purple Rain</a></p>
     <p><a href="exercises/page-3.html">Web page with sections</a></p>
-    
+
+    </section>
+  </header>
+
+  <!-- Canvas do background -->
+  <canvas id="bg"></canvas>
+
+  <script>
+    const canvas = document.getElementById("bg");
+    const ctx = canvas.getContext("2d");
+
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+
+    const balls = [];
+    for (let i = 0; i < 25; i++) {
+      balls.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        r: 5 + Math.random() * 15,
+        dx: (Math.random() - 0.5) * 3,
+        dy: (Math.random() - 0.5) * 3,
+        color: `hsl(${Math.random() * 360}, 80%, 60%)`
+      });
+    }
+
+    function animate() {
+      // fundo semi-transparente para criar rastro
+      ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+      ctx.fillRect(0, 0, width, height);
+
+      for (const b of balls) {
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+        ctx.fillStyle = b.color;
+        ctx.fill();
+
+        b.x += b.dx;
+        b.y += b.dy;
+
+        if (b.x - b.r < 0 || b.x + b.r > width) b.dx *= -1;
+        if (b.y - b.r < 0 || b.y + b.r > height) b.dy *= -1;
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Ajusta ao redimensionar a tela
+    window.addEventListener("resize", () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    });
+  </script>
 </body>
 </html>
