@@ -150,6 +150,8 @@ section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
         }
 
         .section-1 {
+    width: 380px !important;
+    height: 200px !important;
+    border-radius: 50% !important;
     background-color: lightcoral;
-    padding: 20px;  /* Espaçamento interno */   
-        }
+}
