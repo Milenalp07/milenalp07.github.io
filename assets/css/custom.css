@@ -104,12 +104,12 @@ footer.theme-dark .brand,
 footer.theme-dark .footer-name {
   background: linear-gradient(
     90deg,
-    #e06c75 0%,   /* vermelho suave */
-    #d19a66 20%,  /* laranja suave */
-    #e5c07b 40%,  /* amarelo suave */
-    #98c379 60%,  /* verde suave */
-    #61afef 80%,  /* azul suave */
-    #c678dd 100%  /* roxo suave */
+    #e06c75 0%,   
+    #d19a66 20%,  
+    #e5c07b 40%,  
+    #98c379 60%,  
+    #61afef 80%,  
+    #c678dd 100%  
   );
 
   -webkit-background-clip: text;
@@ -132,7 +132,7 @@ nav.theme-dark .container-menu .links-wrapper li {
 }
 
 nav.theme-dark .container-menu .links-wrapper li a:not(.btn) {
-    padding: 12px 24px !important; /* +30% tamanho */
+    padding: 12px 24px !important; /* +30% size */
     border: 2px solid #ffffff !important;
     border-radius: 999px !important;
 
@@ -140,7 +140,7 @@ nav.theme-dark .container-menu .links-wrapper li a:not(.btn) {
     color: #ffffff !important;
 
     text-decoration: none !important;
-    font-size: 1rem !important; /* texto maior */
+    font-size: 1rem !important; /* bigger txt */
     font-weight: 500 !important;
 
     display: inline-flex !important;
