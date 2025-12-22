@@ -249,9 +249,45 @@ header {
 }
 
 .bg-overlay {
-   position: absolute; 
-   top: 0; right: 0; bottom: 0; left: 0;  
-   z-index: 1;
-   background-image: linear-gradient(rgba(29,38,113,0.7),rgba(195,55,100,0.3));    
+    position: absolute; 
+    top: 0; right: 0; bottom: 0; left: 0;  
+    z-index: 1;
+    background-image: linear-gradient(rgba(29,38,113,0.7),rgba(195,55,100,0.3));    
+}
+
+/* ===== FORCE HEADER NAV OUTLINE BUTTONS ===== */
+
+nav.theme-dark ul.links-wrapper {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    list-style: none;
+}
+
+nav.theme-dark ul.links-wrapper li {
+    margin: 0;
+}
+
+nav.theme-dark ul.links-wrapper li a:not(.btn) {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 18px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+
+    color: #ffffff !important;
+    background: transparent !important;
+    text-decoration: none !important;
+
+    font-size: var(--fs-sm);
+    font-weight: 500;
+
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav.theme-dark ul.links-wrapper li a:not(.btn):hover {
+    background-color: rgba(255, 255, 255, 0.18) !important;
 }
 

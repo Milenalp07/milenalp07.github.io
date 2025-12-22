@@ -41,12 +41,12 @@ a.btn-outline:hover {
 .badge {
   background: linear-gradient(
     135deg,
-    rgba(56, 189, 248, 0.18),
-    rgba(249, 115, 22, 0.18)
+    rgb(255, 217, 0),
+    rgba(249, 22, 22, 0.18)
   ) !important;
 
-  border: 1px solid rgba(249, 115, 22, 0.35) !important;
-  color: #e0f2fe !important;
+  border: 1px solid rgba(0, 0, 0, 0.534) !important;
+  color: #000000 !important;
 }
 
 /* ===============================
@@ -104,16 +104,55 @@ footer.theme-dark .brand,
 footer.theme-dark .footer-name {
   background: linear-gradient(
     90deg,
-    #38bdf8 0%,
-    #f97316 35%,
-    #B00505 100%
+    #e06c75 0%,   /* vermelho suave */
+    #d19a66 20%,  /* laranja suave */
+    #e5c07b 40%,  /* amarelo suave */
+    #98c379 60%,  /* verde suave */
+    #61afef 80%,  /* azul suave */
+    #c678dd 100%  /* roxo suave */
   );
 
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  font-weight: 600;
+  background-clip: text;
+  color: transparent;
 }
+/* ===== THEME COLORS ===== */
+
+/* ===== OVERRIDE LUNEVEDY NAV LINKS (AJUSTADO) ===== */
+
+nav.theme-dark .container-menu .links-wrapper {
+    display: flex !important;
+    align-items: center;
+    gap: 8px; /* mais juntos */
+}
+
+nav.theme-dark .container-menu .links-wrapper li {
+    list-style: none !important;
+}
+
+nav.theme-dark .container-menu .links-wrapper li a:not(.btn) {
+    padding: 12px 24px !important; /* +30% tamanho */
+    border: 2px solid #ffffff !important;
+    border-radius: 999px !important;
+
+    background: transparent !important;
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+    font-size: 1rem !important; /* texto maior */
+    font-weight: 500 !important;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.25s ease;
+}
+
+nav.theme-dark .container-menu .links-wrapper li a:not(.btn):hover {
+    background-color: rgba(255, 255, 255, 0.18) !important;
+}
+
 
 
