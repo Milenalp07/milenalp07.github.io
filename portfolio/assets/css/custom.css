@@ -1,0 +1,163 @@
+/* ===== TYPOGRAPHY (ROBOTO ONLY) ===== */
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+header .col-text h2,
+.col-1 > h3 {
+  line-height: 1.8;
+}
+
+/* ===== THEME COLORS (IDENTICAL TO MAIN) ===== */
+
+nav.theme-dark,
+nav.theme-dark ul.links-wrapper.active {
+  background-color: #0f172a;
+}
+
+header.theme-dark {
+  background-color: #0f172a;
+}
+
+/* ===== HEADER NAME GRADIENT ===== */
+
+header.theme-dark h1 {
+  background: linear-gradient(
+    90deg,
+    #38bdf8 0%,
+    #f97316 35%,
+    #ea580c 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== SECTION BACKGROUND ===== */
+
+section.theme-dark {
+  background-color: #0f172a;
+}
+
+/* ===== SECTION TITLES (PROJECT CARDS) ===== */
+
+section.theme-dark h3,
+.projects-title {
+  background: linear-gradient(
+    90deg,
+    #ffb26b 0%,
+    #f97316 45%,
+    #ea580c 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== PROJECT DESCRIPTION TEXT ===== */
+
+section.theme-dark h3.projects-description {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #e5e7eb;
+  font-weight: 400;
+}
+
+/* ===== FOOTER ===== */
+
+footer.theme-dark {
+  background-color: #0f172a;
+}
+
+/* ===== FOOTER NAME GRADIENT ===== */
+
+footer.theme-dark h2,
+footer.theme-dark h3,
+footer.theme-dark .brand,
+footer.theme-dark .footer-name {
+  background: linear-gradient(
+    90deg,
+    #38bdf8 0%,
+    #f97316 35%,
+    #ea580c 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   FORCE DARK BACKGROUND (PROJECTS)
+================================ */
+
+/* garante o mesmo fundo da main */
+section.theme-dark {
+  background-color: #0f172a;
+}
+
+/* remove qualquer fundo interno azul */
+section.theme-dark .container,
+section.theme-dark .row {
+  background-color: transparent;
+}
+
+.theme-dark .bg-dark,
+.theme-dark .bg-theme {
+  background-color: transparent;
+}
+
+/* ===============================
+   FORCE MAIN DARK BACKGROUND
+   (PROJECTS SECTION – HARD FIX)
+================================ */
+
+.theme-dark {
+  background-color: #0f172a !important;
+}
+
+.theme-dark * {
+  background-color: transparent;
+}
+
+/* ===============================
+   ABSOLUTE DARK OVERLAY FIX
+   (LUNEVEDY SAFE METHOD)
+================================ */
+
+section.theme-dark {
+  position: relative;
+  background: #0f172a !important;
+}
+
+section.theme-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #0f172a;
+  z-index: 0;
+}
+
+/* garante que o conteúdo fique acima */
+section.theme-dark > * {
+  position: relative;
+  z-index: 1;
+}

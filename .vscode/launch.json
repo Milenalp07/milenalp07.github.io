@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Desenvolvimento Local",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5500",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
+        },
+        {
+            "name": "Site Online",
+            "type": "chrome",
+            "request": "launch", 
+            "url": "https://ferdnandow.github.io",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
+        }
+    ]
+}

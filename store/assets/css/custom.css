@@ -1,0 +1,163 @@
+/* ===============================
+   TYPOGRAPHY (ROBOTO ONLY)
+================================ */
+
+body {
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+header .col-text h2,
+.col-1 > h3 {
+  line-height: 1.8;
+}
+
+/* ===============================
+   THEME DARK BASE
+================================ */
+
+nav.theme-dark,
+nav.theme-dark ul.links-wrapper.active,
+header.theme-dark,
+section.theme-dark,
+footer.theme-dark {
+  background-color: #0f172a;
+}
+
+/* ===============================
+   HERO NAME GRADIENT (H1)
+================================ */
+
+header.theme-dark h1 {
+  background: linear-gradient(
+    90deg,
+    #38bdf8 0%,
+    #f97316 35%,
+    #ea580c 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===============================
+   SECTION & CARD TITLES
+================================ */
+
+section.theme-dark .col-3 h3,
+.projects-title {
+  background: linear-gradient(
+    90deg,
+    #ffb26b 0%,
+    #f97316 45%,
+    #ea580c 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 600;
+}
+
+/* ===============================
+   PROJECT DESCRIPTION TEXT
+================================ */
+
+section.theme-dark h3.projects-description {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #e5e7eb;
+  font-weight: 400;
+}
+
+/* ===============================
+   BADGES
+================================ */
+
+.badge {
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.18),
+    rgba(249, 115, 22, 0.18)
+  );
+
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  color: #e0f2fe;
+}
+
+/* ===============================
+   BUTTON HOVER EFFECTS
+================================ */
+
+a.btn,
+a.btn-primary,
+a.btn-outline {
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+a.btn:hover,
+a.btn-primary:hover,
+a.btn-outline:hover {
+  color: #f97316;
+  border-color: #f97316;
+}
+
+/* ===============================
+   FOOTER TEXT GRADIENT
+================================ */
+
+footer.theme-dark h2,
+footer.theme-dark h3 {
+  background: linear-gradient(
+    90deg,
+    #38bdf8 0%,
+    #f97316 35%,
+    #ea580c 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 600;
+}
+
+/* ===============================
+   BOOK TITLES (STORE) – GRADIENT LIKE PROJECT TITLES
+   Only affects the H3 titles inside the store grid
+================================ */
+
+section.section-selector-1 .col-4 > h3 {
+  background: linear-gradient(
+    90deg,
+    #ffb26b 0%,
+    #f97316 45%,
+    #ea580c 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 600;
+}

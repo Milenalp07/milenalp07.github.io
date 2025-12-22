@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Oliveira | Student ID 76098 | Tech Meetup 2025</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ===== Sticky Header ===== -->
+    <header class="sticky top-0 z-50 bg-white shadow">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <a href="#" class="text-2xl font-bold text-blue-600 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400">TechMeet</a>
+
+            <ul class="hidden md:flex space-x-6 text-sm font-medium">
+                <li><a href="#home" class="hover:text-blue-600 focus:ring-2 focus:ring-blue-400 rounded">Home</a></li>
+                <li><a href="#schedule" class="hover:text-blue-600 focus:ring-2 focus:ring-blue-400 rounded">Schedule</a></li>
+                <li><a href="#speakers" class="hover:text-blue-600 focus:ring-2 focus:ring-blue-400 rounded">Speakers</a></li>
+                <li><a href="#contact" class="hover:text-blue-600 focus:ring-2 focus:ring-blue-400 rounded">Contact</a></li>
+            </ul>
+
+            <a href="#register" class="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">Register</a>
+        </nav>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section id="home" class="text-center py-20 bg-gradient-to-r from-blue-50 via-white to-blue-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900">Tech Innovators Meetup 2025</h1>
+            <p class="mt-4 text-lg text-gray-600">
+                Join top developers, designers, and entrepreneurs to explore the latest in technology, innovation, and collaboration.
+            </p>
+            <a href="#register" class="inline-block mt-8 bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                Get Tickets
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== Schedule Section ===== -->
+    <section id="schedule" class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Event Schedule</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Day 1 - Innovation & AI</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>09:00 - Opening Keynote: The Future of Tech</li>
+                        <li>10:30 - Panel: AI in Everyday Life</li>
+                        <li>13:00 - Workshop: Building Ethical AI Models</li>
+                        <li>15:00 - Networking & Startup Pitches</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Day 2 - Development & Design</h3>
+                    <ul class="text-gray-700 space-y-2">
+                        <li>09:00 - Talk: Scaling Front-End Architecture</li>
+                        <li>11:00 - Workshop: Design Systems in Action</li>
+                        <li>14:00 - Fireside Chat: The Future of UX</li>
+                        <li>16:00 - Closing Remarks & Afterparty</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Speakers Section ===== -->
+    <section id="speakers" class="py-16 bg-gray-50 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10">Featured Speakers</h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <img src="https://placehold.co/300x300" alt="Speaker 1" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                    <h3 class="text-lg font-semibold">Alex Johnson</h3>
+                    <p class="text-sm text-gray-600">CTO, FutureLabs</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <img src="https://placehold.co/300x300" alt="Speaker 2" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                    <h3 class="text-lg font-semibold">Priya Sharma</h3>
+                    <p class="text-sm text-gray-600">Lead Designer, CloudWave</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <img src="https://placehold.co/300x300" alt="Speaker 3" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                    <h3 class="text-lg font-semibold">Fernando Oliveira</h3>
+                    <p class="text-sm text-gray-600">AI Researcher, DeepTech</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <img src="https://placehold.co/300x300" alt="Speaker 4" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                    <h3 class="text-lg font-semibold">Sara Williams</h3>
+                    <p class="text-sm text-gray-600">Product Manager, InnovateX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h4 class="text-lg font-semibold mb-4 text-white">Follow Us</h4>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-blue-400 focus:ring-2 focus:ring-blue-500 rounded">Twitter</a>
+                <a href="#" class="hover:text-blue-400 focus:ring-2 focus:ring-blue-500 rounded">LinkedIn</a>
+                <a href="#" class="hover:text-blue-400 focus:ring-2 focus:ring-blue-500 rounded">GitHub</a>
+            </div>
+            <p class="text-sm">&copy; 2025 Tech Innovators Meetup. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
