@@ -1,13 +1,13 @@
 /* ===============================
-   NAME CUSTOMIZATION
+ID = 75632
 ================================ */
 
 header.theme-dark h1 {
   background: linear-gradient(
     90deg,
-    #38bdf8 0%,
-    #f97316 35%,
-    #ea580c 100%
+    #B00505 0%,
+    #F7C752 35%,
+    #FFB300 100%
   );
 
   background-clip: text;
@@ -30,8 +30,8 @@ a.btn-outline {
 a.btn:hover,
 a.btn-primary:hover,
 a.btn-outline:hover {
-  color: #f97316;
-  border-color: #f97316;
+  color: #FFB300;
+  border-color: #FFB300;
 }
 
 /* ===============================
@@ -56,9 +56,9 @@ a.btn-outline:hover {
 section.theme-dark h3 {
   background: linear-gradient(
     90deg,
-    #ffb26b 0%,
-    #f97316 45%,
-    #ea580c 100%
+    #F5B427 0%,
+    #F7C752 45%,
+    #FFB300 100%
   );
 
   background-clip: text;
@@ -75,9 +75,9 @@ section.theme-dark h3 {
 .projects-title {
   background: linear-gradient(
     90deg,
-    #ffb26b 0%,
-    #f97316 45%,
-    #ea580c 100%
+    #F5B427 0%,
+    #F7C752 45%,
+    #FFB300 100%
   );
 
   background-clip: text;
@@ -106,7 +106,7 @@ footer.theme-dark .footer-name {
     90deg,
     #38bdf8 0%,
     #f97316 35%,
-    #ea580c 100%
+    #B00505 100%
   );
 
   background-clip: text;
