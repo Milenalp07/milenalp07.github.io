@@ -30,15 +30,50 @@
         li { margin-bottom: 10px; }
         .intro { font-style: italic; color: #555; font-size: 1.1rem; }
         .takeaway-box { background-color: #e7f3ff; border-left: 6px solid #0056b3; padding: 15px; }
+        
+        /* Estilos de imagem e vídeo (Fora do media query para funcionar em tudo) */
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        .video-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .quiz-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #004085;
+        }
+
         @media (max-width: 600px) {
             body { padding: 10px; }
             h1 { font-size: 1.5rem; }
             section { padding: 15px; }
-
-            img {
-                width: 100%;
-                height: auto;
-            }
         }
     </style>
 </head>
@@ -46,38 +81,47 @@
 
     <header>
         <h1>Foundational Concepts of JavaScript: A Strategic Summary</h1>
-        <p class="intro">Introduction: The 80/20 of JavaScript Fundamentals</p>
-
         <img src="assets/img/infographic.png" alt="infographic">
+        <p class="intro">Introduction: The 80/20 of JavaScript Fundamentals</p>
     </header>
 
     <section>
         <p>This document distills the most critical, high-leverage concepts of introductory JavaScript, guided by the 80/20 principle. It is designed for professionals to grasp core logic and strategic importance rather than syntax minutiae.</p>
     </section>
 
+    <section>
+        <h3>Featured Video</h3>
+        <div class="video-container">
+            <video controls>
+                <source src="assets/img/javascript-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
     <h2>1. Integrating and Debugging JavaScript: The Starting Point</h2>
     <section>
         <h3>Efficiently Adding JavaScript to a Web Page</h3>
-        [cite_start]<p>Modern best practices strongly favor the use of <strong>external files</strong>[cite: 672, 1056]:</p>
+        <p>Modern best practices strongly favor the use of <strong>external files</strong>:</p>
         <ul>
-            [cite_start]<li><strong>Code Separation:</strong> Keeps structure (HTML) separate from behavior (JS)[cite: 672].</li>
-            [cite_start]<li><strong>Maintainability:</strong> Updates are made in one place[cite: 673].</li>
-            [cite_start]<li><strong>Performance Caching:</strong> Browsers cache the file for faster subsequent loads[cite: 673].</li>
+            <li><strong>Code Separation:</strong> Keeps structure (HTML) separate from behavior (JS).</li>
+            <li><strong>Maintainability:</strong> Updates are made in one place.</li>
+            <li><strong>Performance Caching:</strong> Browsers cache the file for faster subsequent loads.</li>
         </ul>
-        [cite_start]<p>Ensure script loading is <strong>"non-blocking"</strong> so it does not freeze the page while loading, improving user experience[cite: 664, 670].</p>
+        <p>Ensure script loading is <strong>"non-blocking"</strong> so it does not freeze the page while loading, improving user experience.</p>
 
         <h3>The JavaScript Console: The Developer's Essential Tool</h3>
-        [cite_start]<p>Found within browser DevTools[cite: 675], the Console is used for:</p>
+        <p>Found within browser DevTools, the Console is used for:</p>
         <ul>
-            [cite_start]<li><strong>Outputting Information:</strong> Using <code>console.log</code> to inspect variable states in real-time[cite: 682, 683].</li>
-            [cite_start]<li><strong>Error Reporting:</strong> Reporting errors immediately with line numbers and descriptions[cite: 684].</li>
+            <li><strong>Outputting Information:</strong> Using <code>console.log</code> to inspect variable states in real-time.</li>
+            <li><strong>Error Reporting:</strong> Reporting errors immediately with line numbers and descriptions.</li>
         </ul>
     </section>
 
     <h2>2. Core Concept: Variables and JavaScript's Dynamic Nature</h2>
     <section>
         <h3>Understanding Variables</h3>
-        [cite_start]<p>Variables are named 'storage boxes'[cite: 1010]. [cite_start]In modern JavaScript, two keywords are used[cite: 1016]:</p>
+        <p>Variables are named 'storage boxes'. In modern JavaScript, two keywords are used:</p>
         <table>
             <thead>
                 <tr>
@@ -88,55 +132,93 @@
             <tbody>
                 <tr>
                     <td><code>let</code></td>
-                    [cite_start]<td>Value can be updated or changed later[cite: 1020].</td>
+                    <td>Value can be updated or changed later.</td>
                 </tr>
                 <tr>
                     <td><code>const</code></td>
-                    [cite_start]<td>Value is constant and cannot be changed after assignment[cite: 1019].</td>
+                    <td>Value is constant and cannot be changed after assignment.</td>
                 </tr>
             </tbody>
         </table>
 
         <h3>Variable Naming Conventions</h3>
         <ul>
-            [cite_start]<li>Must be unique and contain no spaces or dashes[cite: 1023, 1024, 1025].</li>
-            [cite_start]<li>Case-sensitive (e.g., <code>firstName</code> vs <code>FirstName</code>)[cite: 1027].</li>
-            [cite_start]<li>Typically follow <strong>camelCase</strong>[cite: 1030].</li>
+            <li>Must be unique and contain no spaces or dashes.</li>
+            <li>Case-sensitive (e.g., <code>firstName</code> vs <code>FirstName</code>).</li>
+            <li>Typically follow <strong>camelCase</strong>.</li>
         </ul>
 
         <h3>A Loosely-Typed Language</h3>
-        [cite_start]<p>JavaScript is "loosely-typed," meaning developers do not need to explicitly state the data type a variable holds[cite: 1008, 1052]. [cite_start]The type is determined automatically based on the assigned value[cite: 1053].</p>
+        <p>JavaScript is "loosely-typed," meaning developers do not need to explicitly state the data type a variable holds. The type is determined automatically based on the assigned value.</p>
     </section>
 
     <h2>3. The Primary Data Types: What Variables Can Hold</h2>
     <section>
         <h3>Strings: Working with Text</h3>
-        [cite_start]<p>A sequence of characters enclosed in quotes[cite: 1042, 1761].</p>
+        <p>A string is a sequence of characters enclosed in quotes.</p>
         <ul>
-            [cite_start]<li><strong>Template Literals:</strong> Enclosed in backticks (`) for embedding variables directly[cite: 1006].</li>
-            [cite_start]<li><strong>Immutability:</strong> String methods do not change the original string; they return a new one[cite: 1757].</li>
-            [cite_start]<li><strong>Properties:</strong> Every string has a <code>.length</code> property[cite: 1785].</li>
+            <li><strong>Template Literals:</strong> Enclosed in backticks (`) for embedding variables directly.</li>
+            <li><strong>Immutability:</strong> String methods do not change the original string; they return a new one.</li>
+            <li><strong>Properties:</strong> Every string has a <code>.length</code> property.</li>
         </ul>
 
         <h3>Numbers: Performing Calculations</h3>
-        [cite_start]<p>Stores integers or decimals without quotes[cite: 1416, 1417]. [cite_start]JavaScript follows <strong>Operator Precedence</strong> (multiplication/division before addition/subtraction)[cite: 1436, 1437]. [cite_start]Parentheses <code>()</code> can force a specific order[cite: 1438].</p>
+        <p>Stores integers or decimals without quotes. JavaScript follows <strong>Operator Precedence</strong> (multiplication/division before addition/subtraction). Parentheses <code>()</code> can force a specific order.</p>
 
         <h3>Booleans and Null: Representing State</h3>
         <ul>
-            [cite_start]<li><strong>Boolean:</strong> Can only be <code>true</code> or <code>false</code>[cite: 1058].</li>
-            [cite_start]<li><strong>Null:</strong> Represents the intentional absence of any value[cite: 588, 929].</li>
+            <li><strong>Boolean:</strong> Can only be <code>true</code> or <code>false</code>.</li>
+            <li><strong>Null:</strong> Represents the intentional absence of any value.</li>
         </ul>
     </section>
 
     <h2>4. Conclusion: Key Takeaways</h2>
     <section class="takeaway-box">
         <ul>
-            [cite_start]<li><strong>Efficient Integration:</strong> Use non-blocking external files[cite: 664, 672].</li>
-            [cite_start]<li><strong>Variable Choice:</strong> Use <code>const</code> by default and <code>let</code> for changing values[cite: 1019, 1020].</li>
-            [cite_start]<li><strong>Dynamic Typing:</strong> JavaScript automatically determines data types[cite: 1053].</li>
-            [cite_start]<li><strong>Data Type Limits:</strong> The type of data dictates what operations (arithmetic vs text transformation) are possible[cite: 1049, 1789].</li>
+            <li><strong>Efficient Integration:</strong> Use non-blocking external files.</li>
+            <li><strong>Variable Choice:</strong> Use <code>const</code> by default and <code>let</code> for changing values.</li>
+            <li><strong>Dynamic Typing:</strong> JavaScript automatically determines data types.</li>
+            <li><strong>Data Type Limits:</strong> The type of data dictates what operations are possible.</li>
         </ul>
     </section>
 
+    <section id="quiz-section">
+        <h3>Quick Knowledge Check</h3>
+        <div class="quiz-item">
+            <p>1. Which keyword is used for a value that should <strong>not</strong> change?</p>
+            <input type="radio" name="q1" value="let"> let<br>
+            <input type="radio" name="q1" value="const"> const
+        </div>
+        <div class="quiz-item" style="margin-top: 15px;">
+            <p>2. What is the index number of the <strong>first</strong> character in a string?</p>
+            <input type="radio" name="q2" value="0"> 0<br>
+            <input type="radio" name="q2" value="1"> 1
+        </div>
+        <button onclick="checkQuiz()" style="margin-top: 20px;">Submit Answers</button>
+        <p id="quiz-result" style="margin-top: 15px; font-weight: bold;"></p>
+    </section>
+
+    <script>
+        function checkQuiz() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const resultDisplay = document.getElementById('quiz-result');
+
+            if (!q1 || !q2) {
+                resultDisplay.textContent = "Please answer all questions.";
+                resultDisplay.style.color = "orange";
+                return;
+            }
+
+            let score = 0;
+            if (q1.value === "const") score++;
+            if (q2.value === "0") score++;
+
+            resultDisplay.textContent = `You scored ${score}/2!`;
+            resultDisplay.style.color = score === 2 ? "green" : "red";
+            
+            console.log(`Quiz submitted. Score: ${score}`);
+        }
+    </script>
 </body>
 </html>

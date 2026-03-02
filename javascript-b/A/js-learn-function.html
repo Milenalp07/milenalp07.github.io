@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>JavaScript: Function Declarations & Anonymous Functions</title> <style> :root { --bg-color: #0f172a; --card-bg: #1e293b; --text-main: #f8fafc; --text-muted: #cbd5e1; --accent: #38bdf8; --code-bg: #000000; --border: #334155; }
+
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 0;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 40px;
+    }
+
+    h1 { color: var(--accent); margin-bottom: 10px; }
+    h2 { color: var(--accent); border-left: 4px solid var(--accent); padding-left: 15px; margin-top: 40px; }
+    h3 { color: var(--text-muted); margin-top: 25px; }
+
+    .card {
+        background: var(--card-bg);
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    code {
+        background: var(--code-bg);
+        color: #7dd3fc;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Consolas', monospace;
+    }
+
+    pre {
+        background: var(--code-bg);
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        border: 1px solid var(--border);
+    }
+
+    pre code {
+        color: #e2e8f0;
+        background: none;
+        padding: 0;
+    }
+
+    ul { list-style-type: none; padding: 0; }
+    li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+    li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: var(--card-bg);
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+    }
+
+    th { color: var(--accent); }
+
+    .badge {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--bg-color);
+        padding: 2px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+</style>
+</head> <body>
+
+<div class="container"> <header> <h1>JavaScript Functions</h1> <p>Mastering Function Declarations and Anonymous Expressions</p> </header>
+
+    <img src="assets/img/infopraphic-2.png" alt="JavaScript Functions Infographic" style="width:100%; border-radius: 12px; margin-bottom: 40px;">
+
+<section>
+    <h2>About Functions</h2>
+    <div class="card">
+        <p>Functions are the building blocks of JavaScript, acting as "sub-programs" that store reusable code[cite: 7, 8]. Instead of writing the same logic repeatedly, you can write it once and invoke (or "fire") it as many times as needed[cite: 11, 12].</p>
+        <ul>
+            <li><strong>Naming:</strong> Use <code>camelCase</code> and start with an action verb like <code>calculateTotal()</code>[cite: 21, 23].</li>
+            <li><strong>Uniqueness:</strong> Names must be unique within their scope[cite: 17, 18].</li>
+            <li><strong>Case Sensitivity:</strong> <code>UpdateTotal()</code> and <code>updateTotal()</code> are different functions[cite: 22].</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>1. Function Declarations</h2>
+    <div class="card">
+        <span class="badge">Standard Method</span>
+        <p>A function declaration uses the <code>function</code> keyword followed by a name[cite: 32, 33].</p>
+        <pre><code>function displayGreeting() {
+console.log('Hello, world!');
+}</code></pre> <h3>Key Feature: Hoisting</h3> <p>Function declarations are <strong>hoisted</strong>, meaning they can be called in the code even before they are defined.</p> </div> </section>
+
+<section>
+    <h2>2. Anonymous Functions</h2>
+    <div class="card">
+        <span class="badge">Function Expressions</span>
+        <p>An anonymous function has no name and is often assigned to a <code>const</code> variable[cite: 108, 110]. These are also known as <strong>function expressions</strong>[cite: 113].</p>
+        <pre><code>const showGreeting = function() {
+console.log('Hello from anonymous function');
+};</code></pre> <h3>Difference: No Hoisting</h3> <p>Unlike declarations, anonymous functions are <strong>not hoisted</strong>. You must define them before you try to call them.</p> </div> </section>
+
+<section>
+    <h2>Parameters & Arguments</h2>
+    <div class="card">
+        <p>Functions can accept input values to perform tasks[cite: 44].</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Parameter</strong></td>
+                    <td>The variable name defined in the function parentheses (e.g., <code>num1</code>)[cite: 47, 55].</td>
+                </tr>
+                <tr>
+                    <td><strong>Argument</strong></td>
+                    <td>The actual value passed to the function when calling it (e.g., <code>21</code>)[cite: 54, 56].</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Pro-Tip:</strong> You can set <strong>default values</strong> to prevent errors if an argument is missing[cite: 80, 81].</p>
+        <pre><code>function showMessage(message = "Default Error") {
+console.log(message);
+}</code></pre> </div> </section>
+
+<section>
+    <h2>Return Values & Scope</h2>
+    <div class="card">
+        <h3>The <code>return</code> Keyword</h3>
+        <p>To use a result outside of a function, you must use <code>return</code>[cite: 67]. This also stops the function from executing any further code on subsequent lines[cite: 70, 71].</p>
+        
+        <h3>Understanding Scope</h3>
+        <ul>
+            <li><strong>Global Scope:</strong> Variables defined outside functions, accessible everywhere[cite: 88, 89].</li>
+            <li><strong>Local Scope:</strong> Variables defined inside a function are only accessible within that function[cite: 90].</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Immediately-Invoked Anonymous Functions (IIFE)</h2>
+    <div class="card">
+        <p>Only anonymous functions can be run immediately without being called elsewhere[cite: 127]. This is done by wrapping the function in parentheses[cite: 128].</p>
+        <pre><code>(function() {
+console.log("I run immediately!");
+})();</code></pre> </div> </section>
+
+<footer style="text-align: center; padding: 20px; color: var(--text-muted); font-size: 0.9rem;">
+    <p>Tutorial content by Brendan Munnelly [cite: 1, 102]</p>
+</footer>
+</div>
+
+</body> </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Data List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 { color: #333; }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        #button-container {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        #rm-search {
+            display: none; /* 👈 escondido por padrão */
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        #remote-data-container {
+            max-width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+
+    <script src="list-remote.js" defer></script>
+</head>
+<body>
+
+    <h1>Load Remote Data</h1>
+    <p>Click the buttons below to load data from remote APIs.</p>
+
+    <div id="button-container">
+        <button class="btn" id="btn-countries">Load Countries</button>
+        <button class="btn" id="btn-users">Load Users</button>
+        <button class="btn" id="btn-rick-grid">Rick and Morty</button>
+
+        <br>
+
+        <!-- 🔍 SEARCH (só aparece no Rick) -->
+        <input id="rm-search" type="text" placeholder="Search character..." />
+    </div>
+
+    <div id="remote-data-container"></div>
+
+</body>
+</html>

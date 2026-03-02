@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product GridView (Tailwind)</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      html, body { height: 100%; }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+    <main class="min-h-screen px-4 py-10 sm:py-14">
+      <section class="mx-auto w-full max-w-6xl">
+        <!-- Header -->
+        <div class="mb-6 flex items-start justify-between gap-4">
+          <div>
+            <h1 class="text-xl font-semibold tracking-tight sm:text-2xl">
+              Products
+            </h1>
+            <p class="mt-1 text-sm text-zinc-400">
+              Responsive gridview (1 column on mobile, multiple columns on larger screens).
+            </p>
+          </div>
+
+          <span
+            class="inline-flex items-center rounded-full border border-zinc-800 bg-zinc-900/60 px-3 py-1 text-xs text-zinc-300"
+          >
+            Dark UI
+          </span>
+        </div>
+
+        <!-- Grid container -->
+        <div
+          id="productGrid"
+          class="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3"
+        ></div>
+
+        <p class="mt-4 text-xs text-zinc-500">
+          Tip: Resize the window to see the grid change columns.
+        </p>
+      </section>
+    </main>
+
+    <script src="./list-gridview.js"></script>
+  </body>
+</html>

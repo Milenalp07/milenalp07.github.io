@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    .newHeadingClass { 
+        background-color: blue; 
+        color: pink; 
+        padding: 10px; 
+        border-radius: 5px
+    }
+
+    .messageOrderPlaced { 
+    background-color: lightgreen; 
+    color: #000; 
+    border: solid 1px green;
+    padding: 10px; 
+    border-radius: 5px
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1 id="bigHeading">Some Heading </h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur molestiae doloribus dolor quia nam animi fugit porro obcaecati, perspiciatis saepe maxime dolores unde. Quasi reiciendis aut eaque repudiandae saepe dolores.</p>
+
+
+
+    <!-- Button linked to event handler function -->
+    <button id="btn_1" onclick="changeHeading()">Update h1</button>
+
+    <button id="btn_2" onclick="restoreHeading()">Restore h1</button>
+
+    <button id="btn_3" onclick="changeHeading()">Update h1 Style</button>
+
+    <button id="btn_4" onclick="placeOrder()">Order product</button>
+
+    <div id="myDIV">Sample text</div>
+    <button id="turnGreen" onclick="turnGreen()">Turn Green</button>
+    <button id="resetColour" onclick="resetColour()">Reset Colour</button>
+
+    <script>
+        //JavaScript code goes here
+        //Create three variables with your first name, last name, and favourite singer. Use a template literal to output:"Hi! My name is [first name] [last name] and my favourite singer is [singer]."
+        
+        let firstName = "Milena";
+        let lastName = "Pires";
+        let singerName = "Hayley Williams";
+
+        console.log(`Hi! My name is ${firstName} ${lastName} and my favourite singer is ${singerName}.`);
+        
+        //=============== FUCTION DECLARATIONS ===============
+
+        
+
+        //Function declaration
+        function displayGreeting() {
+            console.log("Hello, world!");
+        }
+        //Outputs 'Hello,world!' to Console when called
+
+        displayGreeting(); //Outputs 'Hello, world!' to the console
+
+        // Function declaration with parameter
+        function showNumber(num) {
+        console.log(`Number passed as parameter is: ${num}`);
+        }
+
+        // Function call with argument
+        showNumber(42); 
+
+        // Function declaration with two parameters
+        function addTwoNumbers(num1, num2) {
+            // Outputs the sum of two numbers
+            console.log(`Sum is : ${num1 + num2}`); 
+            return (num1 + num2);
+        }
+
+        // Function call with two arguments
+        let result = addTwoNumbers(10, 15); // Outputs 'Sum is: 25' to the console
+        console.log(`Returned value is: ${result}`); // Outputs 'Returned value is: 25' to the console
+
+        console.log("Got this far.");
+
+        //Create a function with parameters that calculates the area of a ractangle. The function should return the its output to the calling  program and display the result in the console.
+        function calcArea(x,y) {
+            return (x * y);
+        };
+
+        let answer = calcArea(2, 4);
+
+        console.log(`Area of the rectangle is: ${answer}`);
+
+        // Add CSS class to the heading
+        // Function to change the heading properties and content
+        function changeHeading() {
+            // Get the HTML heading element from the web page
+            let bigHeading = document.getElementById('bigHeading');
+            // Add a new CSS class to the element
+            bigHeading.classList.add('newHeadingClass');
+            // Update HTML element content
+            bigHeading.innerText = 'New heading text from JS';
+            // Update the HTML element content with HTML tag included
+            bigHeading.innerHTML = 'New heading text in <i>italics</i> from JS';
+        }
+            
+        // Function to restore the heading to its original state
+        function restoreHeading() {
+            // Get the HTML heading element from the web page
+            let bigHeading = document.getElementById('bigHeading');
+            // Remove the CSS class from the element
+            bigHeading.classList.remove('newHeadingClass');
+            // Replace the new HTML element content with the original content
+            bigHeading.innerText = 'Big heading here';
+        }
+
+        // Function to change the heading properties and content
+        function changeHeading() {
+            // Get the HTML heading element from the web page
+            let bigHeading = document.getElementById('bigHeading');
+            // Update HTML element styles directly;
+            bigHeading.style.backgroundColor = 'red';
+            bigHeading.style.color = 'white';
+            // Update HTML element content
+            bigHeading.innerText = 'New heading text from JS';
+            // Update the HTML element content with HTML tag included
+            bigHeading.innerHTML = 'New heading text in <i>italics</i> from JS';
+        }
+
+        // Function to add a new message to the page
+        function placeOrder() {
+            // Create a new HTML element
+            let newMessage = document.createElement("div");
+            // Add a CSS class to the new element
+            newMessage.classList.add("messageOrderPlaced");
+            // Add content to the new element
+            newMessage.innerHTML = "Your order has been placed. <b>Thank you</b>";
+            // Add the new element to the web page
+            document.body.appendChild(newMessage);
+        }
+
+
+        function turnGreen() {
+            let var1 = document.getElementById("myDIV");
+            var1.style.backgroundColor = "green";
+        }
+
+        function resetColour() {
+            let var1 = document.getElementById("myDIV");
+            var1.style.backgroundColor = "white";
+        }
+
+        // ======== ANONYMOUS FUNCTIONS ========
+
+        // Anonymous function	
+        const showGreeting = function () {
+        console.log('Hello from anonymous function');
+        }
+
+        showGreeting(); // Outputs 'Hello from anonymous function' to console
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rick and Morty Search</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; text-align: center; }
+    h1 { margin-bottom: 5px; }
+    p { margin-top: 0; font-size: 18px; }
+
+    .controls { margin: 20px 0; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+    .btn {
+      padding: 10px 20px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .btn:hover { background-color: #0056b3; }
+
+    #rm-search {
+      padding: 10px 12px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 320px;
+      max-width: 90%;
+    }
+
+    #remote-data-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .name { font-weight: bold; margin: 10px 0 4px; }
+    .meta { margin: 2px 0; }
+    .error { color: #b00020; font-weight: bold; }
+  </style>
+
+  <script src="rick-and-morty.js" defer></script>
+</head>
+<body>
+  <h1>Rick and Morty</h1>
+  <p>Search characters by name.</p>
+
+  <div class="controls">
+    <button class="btn" id="btn-rick-load">Load Characters</button>
+    <input id="rm-search" type="text" placeholder="Type a name (e.g., Rick, Morty)..." />
+  </div>
+
+  <div id="remote-data-container"></div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Fundamentals – Full Example</title>
+
+    <!-- JavaScript runs after HTML is loaded -->
+    <script defer>
+        /*************************************************
+         * ADDING JAVASCRIPT TO WEB PAGES
+         *************************************************/
+
+        console.log("JavaScript is running correctly.");
+        console.log("This script is embedded in the HTML file.");
+
+        /*************************************************
+         * VARIABLES AND LITERALS
+         *************************************************/
+
+        // Declaring variables
+        let userName;
+        let userAge;
+
+        // Assigning values
+        userName = "Milena Pires";
+        userAge = 27;
+
+        console.log("User name:", userName);
+        console.log("User age:", userAge);
+
+        // Declaring and assigning at the same time
+        let userEmail = "milena@email.com";
+        const TAX_RATE = 0.23;
+
+        console.log("Email:", userEmail);
+        console.log("Tax rate:", TAX_RATE);
+
+        // Template literals
+        console.log(`Hello ${userName}, you are ${userAge} years old.`);
+
+        // Type checking
+        console.log("Type of userAge:", typeof userAge);
+        console.log("Type of userName:", typeof userName);
+
+        /*************************************************
+         * WORKING WITH STRINGS
+         *************************************************/
+
+        let message = "  JavaScript is Amazing!  ";
+
+        // Length
+        console.log("Length:", message.length);
+
+        // Access characters
+        console.log("First character:", message[0]);
+
+        // Trim spaces
+        let trimmedMessage = message.trim();
+        console.log("Trimmed:", trimmedMessage);
+
+        // Upper and lower case
+        console.log("Uppercase:", trimmedMessage.toUpperCase());
+        console.log("Lowercase:", trimmedMessage.toLowerCase());
+
+        // Includes and indexOf
+        console.log("Includes 'JavaScript':", trimmedMessage.includes("JavaScript"));
+        console.log("Index of 'Amazing':", trimmedMessage.indexOf("Amazing"));
+
+        // Slice
+        console.log("Slice (0–10):", trimmedMessage.slice(0, 10));
+
+        // Replace
+        let replacedText = trimmedMessage.replace("Amazing", "Powerful");
+        console.log("Replaced:", replacedText);
+
+        // Replace all
+        let vowelsReplaced = trimmedMessage.replaceAll("a", "@");
+        console.log("Replace all:", vowelsReplaced);
+
+        // Concatenation
+        let firstName = "John";
+        let lastName = "Doe";
+        let fullName = `${firstName} ${lastName}`;
+        console.log("Full name:", fullName);
+
+        /*************************************************
+         * WORKING WITH NUMBERS
+         *************************************************/
+
+        let num1 = 10;
+        let num2 = 3;
+
+        // Arithmetic operations
+        console.log("Addition:", num1 + num2);
+        console.log("Subtraction:", num1 - num2);
+        console.log("Multiplication:", num1 * num2);
+        console.log("Division:", num1 / num2);
+
+        // Operator precedence
+        console.log("5 + 2 * 3 =", 5 + 2 * 3);
+        console.log("(5 + 2) * 3 =", (5 + 2) * 3);
+
+        // Increment and decrement
+        let counter = 5;
+        counter++;
+        console.log("After increment:", counter);
+
+        counter--;
+        console.log("After decrement:", counter);
+
+        // Compound assignment
+        let total = 20;
+        total += 10;
+        console.log("Total after += :", total);
+
+        total -= 5;
+        console.log("Total after -= :", total);
+
+        // Numbers vs strings
+        let price = 9.99;
+        let quantity = 3;
+        let totalPrice = price * quantity;
+
+        console.log(`Total price: €${totalPrice}`);
+
+        console.log("Type of totalPrice:", typeof totalPrice);
+
+        console.log("End of JavaScript fundamentals example.");
+    </script>
+</head>
+
+<body>
+    <h1>JavaScript Fundamentals</h1>
+    <p>Open the browser console (F12) to see all outputs.</p>
+</body>
+</html>

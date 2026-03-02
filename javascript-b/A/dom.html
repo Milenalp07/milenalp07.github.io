@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .color-red {
+            color: red;
+            background-color: white;
+        }
+        button {
+            color: white;
+            background-color: green;
+            padding: 6px 12px;
+            border: solid 1px green;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 6px 12px;
+            border: solid 1px gray;
+        }
+
+        .input-error {
+        padding: 6px 12px;
+        background-color: lightcoral;
+        
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="myHeading">My Heading here</h1>
+
+    <p id="myParagraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed obcaecati asperiores ut tempora.
+    </p>
+
+    <button onclick="changeHeading()">Update Heading</button>
+    <button onclick="changeParagraph()">Update Paragraph</button>
+
+    <br><br>
+
+    <input type="text" id="userName" placeholder="Enter your name">
+
+    <br><br>
+    <button onclick="showName()">Submit</button>
+
+    <script>
+        function changeHeading() {
+            let varHeading = document.getElementById("myHeading");
+            console.log(`Before update: ${varHeading.innerText}`);
+            varHeading.innerText = "Some new heading here";
+        }
+
+        function changeParagraph() {
+            let varParagraph = document.getElementById("myParagraph");
+            console.log(`Before update: ${varParagraph.innerText}`);
+            varParagraph.innerText = "New Paragraph Updated";
+            varParagraph.classList.add("color-red");
+        }
+
+        // Function to read input value and display it
+        function showName() {
+            // Get the value from the input field
+            let name = document.getElementById('userName').value;
+            // Display the name
+            console.log(`Hello, ${name}!`);    
+        }
+        // Function to read trimmed input value and display it
+        function showName() {
+
+            const input = document.getElementById('userName');
+            const name = input.value.trim();
+
+            if (name.length === 0) {
+                // Empty input → turn box red
+                input.classList.add('input-error');
+                console.log("Please enter your name.");
+            } else {
+                // Valid input → remove red border
+                input.classList.remove('input-error');
+                console.log(`Hello, ${name}!`);
+            }
+        }
+
+                    // Declaring and populating an object
+            const objUser = {
+                firstName: "Luis", // string
+                lastName: "Martinez", // string
+                age: 32, // number
+                isActive: true // boolean
+            };
+
+            console.log(objUser);
+
+            // === Working with the properties of an object ===
+
+            // Declaring and populating new object
+            const objCar = {
+                make: "Toyota",
+                model: "Camry",
+                year: 2023,
+            };
+            console.log("Original object"); 
+            console.log(objCar);
+
+            // Adding two new properties (key-value) pairs to the object
+            objCar.color = "Blue";   
+            objCar.isElectric = false;  
+            console.log("Added two new properties"); 
+            console.log(objCar);
+
+            // Deleting a property from an object
+            delete objCar.isElectric;
+            console.log("Removed a property"); 
+            console.log(objCar);
+
+            // Updating the value within two properties
+            objCar.color = "Red";   
+            objCar.year = 2012;   
+            console.log("Updated two property values"); 
+            console.log(objCar);
+
+
+        
+
+
+    </script>
+
+</body>
+</html>
